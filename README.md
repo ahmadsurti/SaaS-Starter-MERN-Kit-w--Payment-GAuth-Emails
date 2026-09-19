@@ -34,6 +34,8 @@ This starter kit provides core infrastructure required by modern subscription so
 - [Key Architectural Decisions](#key-architectural-decisions)
 - [What I Learned Building This](#what-i-learned-building-this)
 - [Project Status & Known Limitations](#project-status--known-limitations)
+  - [Release Status: v0.9.0 (Alpha / Public Beta)](#release-status-v090-alpha--public-beta)
+  - [Upcoming Roadmap (State-of-the-Art Overhaul)](#upcoming-roadmap-state-of-the-art-overhaul)
 - [Troubleshooting Guide](#troubleshooting-guide)
 - [Production Deployment](#production-deployment)
 - [License & Attribution](#license--attribution)
@@ -523,6 +525,28 @@ Another key takeaway was **managing third-party service boundaries without over-
 
 ---
 
+### Release Status: v0.9.0 (Alpha / Public Beta)
+
+> [!NOTE]
+> **Engineering Focus vs. Frontend UI:**  
+> This entire repository was audited, hardened, and refactored under an aggressive **48-hour sprint**. Priority was strictly directed toward production-grade backend plumbing: eliminating security vulnerabilities, patching Stripe webhook race conditions, enforcing OWASP ASVS session hardening, and building resilient email/auth recovery pipelines.  
+> 
+> As a result, the current client UI is a raw, placeholder MVP ("purple AI slop") intended solely for functional testing. A comprehensive frontend overhaul is actively underway.
+
+### Upcoming Roadmap (State-of-the-Art Overhaul)
+
+We are actively transitioning this starter kit into an avant-garde, production-ready SaaS template with:
+
+- [ ] **Modern shadcn/ui Dashboard Shell:** Replacing generic purple gradients with a bespoke, dark-mode-first dashboard layout with modular widgets and collapsible navigation.
+- [ ] **Streamed AI Chat Interface:** Upgrading the static AI provider abstraction (`aiProviderService.ts`) to a real-time, token-streamed chat interface (SSE / Server-Sent Events).
+- [ ] **Interactive SaaS Analytics:** Real-time MRR, subscriber churn, active session counts, and billing event metrics visualized with interactive charts.
+- [ ] **Multi-Seat / Team Workspaces:** Workspace switcher, member invitations, and role-based access control (Owner / Admin / Member).
+- [ ] **Developer API Key Portal:** Self-serve dashboard for issuing, scoping, and revoking headless API keys.
+- [ ] **Security Audit Log:** Visual activity log tracking authentication events, password changes, and subscription lifecycle updates.
+- [ ] **Shared Monorepo Workspace (`@starter/shared`):** Consolidating mirrored client/server validation schemas and TypeScript DTOs into a single package.
+
+---
+
 ## Troubleshooting Guide
 
 ### 1. CORS Errors During Login / Registration
@@ -579,9 +603,6 @@ See the [NOTICE](NOTICE) file for original project attribution:
 ```text
 SaaS-Starter-MERN-Kit-w/-Payment-GAuth-Emails
 Copyright 2026 Ahmad
-
-Original project:
-https://github.com/viitormasc/SaaS-Subscription-Auth-Starter-Kit
 
 This project was created by Ahmad.
 ```
