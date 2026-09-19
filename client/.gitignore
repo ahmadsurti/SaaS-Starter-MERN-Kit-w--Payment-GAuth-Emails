@@ -1,0 +1,23 @@
+# Environment
+.env
+.env.local
+.env.development.local
+.env.production.local
+.envrc
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Vite cache (generated, never commit)
+.vite/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db

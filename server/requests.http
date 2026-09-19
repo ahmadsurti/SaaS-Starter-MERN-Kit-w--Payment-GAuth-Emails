@@ -1,0 +1,68 @@
+// Post Signup
+POST http://localhost:2121/api/auth/signup HTTP/1.1
+content-type: application/json
+
+{
+  "email":"vitor9@gmail.com",
+  "password":"YourPassword@123",
+  "name": "Vitor Mascarenhas",
+  "confirmPassword": "YourPassword@123"
+}
+
+
+###
+// Send Signup validation email
+POST http://localhost:2121/api/auth/sendValidationCodeEmail HTTP/1.1
+content-type: application/json
+
+{
+  "email":"vitor9@gmail.com",
+  "password":"YourPassword@123",
+  "name": "Vitor Mascarenhas",
+  "confirmPassword": "YourPassword@123"
+}
+
+###
+// Validate Email code  
+GET http://localhost:2121/api/auth/checkValidationCodeEmail HTTP/1.1
+content-type: application/json
+
+{
+  "email":"vitor9@gmail.com",
+  "validationCode": "7816"
+}
+
+
+
+###
+// Post Login
+POST http://localhost:2121/api/auth/login HTTP/1.1
+content-type: application/json
+
+{
+  "email":"vitor9@gmail.com",
+  "password":"YourPassword@123"
+}
+
+###
+//Logout
+GET http://localhost:2121/api/auth/logout HTTP/1.1
+content-type: application/json
+
+###
+//Change password 
+PUT http://localhost:2121/api/auth/changePassword HTTP/1.1
+content-type: application/json
+
+{
+  "userId":"68dda0ebb1bde19db7c6981e",
+  "newPassword":"NewPassword@123",
+  "confirmPassword":"NewPassword@123"
+}
+
+
+###
+//Get active user
+GET http://localhost:2121/api/auth/me HTTP/1.1
+content-type: application/json
+

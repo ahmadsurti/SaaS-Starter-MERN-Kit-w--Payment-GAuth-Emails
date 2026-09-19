@@ -1,0 +1,25 @@
+# Environment
+.env
+.env.dev
+.env.development
+.env.production
+.envrc
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Uploads (local dev artefacts — media is on Cloudinary in production)
+server/uploads/
+server/temp-uploads/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db

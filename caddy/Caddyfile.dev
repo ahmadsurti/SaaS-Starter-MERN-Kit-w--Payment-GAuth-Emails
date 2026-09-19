@@ -1,0 +1,12 @@
+{
+    local_certs
+}
+
+solar.localhost {
+    encode gzip
+    reverse_proxy frontend:5173
+}
+
+api.solar.localhost {
+    reverse_proxy server:2121
+}
