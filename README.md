@@ -604,5 +604,8 @@ See the [NOTICE](NOTICE) file for original project attribution:
 SaaS-Starter-MERN-Kit-w/-Payment-GAuth-Emails
 Copyright 2026 Ahmad
 
+Original Project:
+https://github.com/ahmadsurti/SaaS-Starter-MERN-Kit-w--Payment-GAuth-Emails
+
 This project was created by Ahmad.
 ```
